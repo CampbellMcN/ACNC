@@ -13,11 +13,11 @@ ACNC.lite.df %>%
   filter(total.full.time.equivalent.staff < 20000) %>% #removing two outliers where data is obviously wrong
 ggplot(aes(x = total.full.time.equivalent.staff, 
            y = revenue.from.goods.and.services,
-           color = research)) +``
+           color = research)) +
   geom_point() +
   geom_smooth(method=loess, se= FALSE)+
   labs(title = "Total staff and self-generated income in Australian NFPs", 
-       subtitle = "Prepared by Campbell McNolty for Deloitte Access Economics", x = "Total FTE staff", 
+       subtitle = "Prepared by Campbell McNolty", x = "Total FTE staff", 
        y = "Revenue from Goods and Services (AUD)", caption = "Data: ACNC 2019 Annual Information Statement Data", 
        color = "Research Organisations")+
   scale_y_continuous(name = "Revenue from Goods and Services (AUD)", 
